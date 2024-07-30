@@ -8,6 +8,7 @@ import (
 
 // Ficha de informações necessárias e suas verificações
 type Token struct {
+	ID     int    `json:"id"`
 	Name   string `json:"name" validate:"required,min=3,max=40"`
 	CPF    string `json:"cpf" validate:"required,len=11"`
 	Email  string `json:"email" validate:"required,email"`

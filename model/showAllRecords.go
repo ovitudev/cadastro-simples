@@ -4,7 +4,7 @@ import (
 	"database/sql"
 )
 
-// Responsável por mostrar cadastros realizados
+// Responsável por mostrar TODOS os cadastros realizados
 func GetAllTokens(db *sql.DB) ([]Token, error) {
 	rows, err := db.Query("SELECT id, name, cpf, email, number FROM userSignUp")
 	if err != nil {
